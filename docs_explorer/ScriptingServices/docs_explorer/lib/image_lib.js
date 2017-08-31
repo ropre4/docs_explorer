@@ -5,8 +5,8 @@ var streams = require('io/streams');
 var documentLib = require("docs_explorer/lib/document_lib");
  
  
-exports.uploadImageWithResize = function(folder, image, width, height){
-                var fileName = image.name;
+exports.uploadImageWithResize = function(folder, name, image, width, height){
+                var fileName = name;
                 var mimetype = image.contentType;
                 var inputStream = image.getInputStream();
                

@@ -28,9 +28,9 @@ function handlePost(){
  
                                                 var width = request.getParameter('width');
                                                 var height = request.getParameter('height');
-                                               
-                                                if (width && height){
-                                                                result.push(imageLib.uploadImageWithResize(folder, document, width, height));
+                                                var name = request.getParameter('name');
+                                                if (width && height && name){
+                                                                result.push(imageLib.uploadImageWithResize(folder, name, document, width, height));
                                                 } else {
                                                                 result.push(documentLib.uploadDocument(folder, document));
                                                 }
